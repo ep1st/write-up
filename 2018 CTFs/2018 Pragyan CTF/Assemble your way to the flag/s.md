@@ -1,0 +1,38 @@
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  printf(
+    "Look for something else....\n",
+    argv,
+    envp,
+    112LL,
+    99LL,
+    116LL,
+    102LL,
+    123LL,
+    108LL,
+    51LL,
+    103LL,
+    101LL,
+    78LL,
+    100LL,
+    115LL,
+    95LL,
+    99LL,
+    48LL,
+    100LL,
+    51LL,
+    95LL,
+    49LL,
+    110LL,
+    95LL,
+    52LL,
+    83LL,
+    115LL,
+    51LL,
+    109LL,
+    98LL,
+    49LL,
+    121LL,
+    125LL);
+  return 0;
+}
