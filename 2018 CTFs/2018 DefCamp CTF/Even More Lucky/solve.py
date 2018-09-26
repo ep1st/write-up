@@ -17,7 +17,7 @@ if DEBUG:
     context.log_level = 'debug'
 
 else:
-    r = remote('',0)
+    r = remote('167.99.143.206',65032)
     timeout = 0.3
 
 def ss(s):
