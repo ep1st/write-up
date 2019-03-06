@@ -1,0 +1,2 @@
+{ti_nar_uoy}FTC
+CTF{you_ran_it}
