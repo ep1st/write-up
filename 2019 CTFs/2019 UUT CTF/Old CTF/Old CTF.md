@@ -1,6 +1,6 @@
 # **Old CTF**
 
-#### tag : web, csrf, cookie 
+#### tag : web, sqli, csrf, cookie 
 
 -----------------------------------------------
 
