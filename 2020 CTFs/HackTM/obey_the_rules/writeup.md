@@ -93,7 +93,7 @@ __int64 set_context()
 }
 ```
 
-First of all, I checked seccomp rule in server. I made shellcode that call each syscall and got server's response. `ALLOW` syscall return `Segfault` but `KILL` syscall return `Bad system call`. Here is my check code [check.py](./solve.py.bak).
+First of all, I checked seccomp rule in server. I made shellcode that call each syscall and got server's response. `ALLOW` syscall return `Segfault` but `KILL` syscall return `Bad system call`. Here is my check code [check.py](./check.py).
 
 ```
 mov al, n (n=0~0xff)
