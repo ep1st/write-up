@@ -148,7 +148,7 @@ syscall
 
 Great, We can call read(0, region[&shellcode], n). Putting second shellcode with 0x10 byte dummy, we can run new shellcode continuosly. 
 
-After reading new shellcode, mabye find something weird(bad syscall retunred from read(3,buf,n)) when read flag after open. Yes, server's seccomp rule have open's A0 comparing.
+After reading new shellcode, mabye find something weird(bad syscall retunred from read(3,buf,n)) when read flag after open. Yes, server's seccomp rule have read's A0 comparing.
 
 So we can guess server's seccomp rule like:
 
@@ -156,8 +156,8 @@ So we can guess server's seccomp rule like:
 scmp_filter_ctx ctx;
 ctx = seccomp_init(SCMP_ACT_KILL);
 
-seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(read), 0);
-seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 1, SCMP_CMP_NE(3));
+seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(read), 1, SCMP_CMP_NE(3));
+seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 0);
 seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(exit), 0);
 
 seccomp_load(ctx);
